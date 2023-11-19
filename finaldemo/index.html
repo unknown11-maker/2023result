@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vturesult2023</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Visveswaraya Technological University</h1>
+        <label for="codeInput">Enter USN:</label>
+        <input type="text" id="codeInput" placeholder="USN">
+        <button onclick="showImage()">View result</button>
+        <div id="imageContainer"></div>
+    </div>
+
+    <script>
+        function showImage() {
+            var code = document.getElementById("codeInput").value;
+            var imageContainer = document.getElementById("imageContainer");
+
+            if (code === "1jt21cs041") {
+                var imageUrl = "C:/Users/DHANUSH/OneDrive/Desktop/finaldemo/pic.png";
+                imageContainer.innerHTML = `<img src="${imageUrl}" style="max-width: 100%;">`;
+            } else {
+                imageContainer.innerHTML = "Invalid USN.";
+            }
+        }
+    </script>
+</body>
+</html>
